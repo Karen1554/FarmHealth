@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2a7c2a;
+}
+
+.resultados {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.vaca-imagen {
+  width: 180px;
+  height: auto;
+}
+
+.datos p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+button {
+  background-color: #2a7c2a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #256b25;
+}
+
+.modal {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.oculto {
+  display: none;
+}
+
+.modal label {
+  display: block;
+  margin-top: 10px;
+}
+
+.modal select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.resultado-diagnostico {
+  background: #e9ffe9;
+  padding: 15px;
+  border: 1px solid #b4e1b4;
+  border-radius: 6px;
+}
+
+.graficos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
