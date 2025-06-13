@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>FarmHealth - Monitoreo Bovino</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <h1>FarmHealth: Monitoreo Inteligente de Bovinos</h1>
+
+    <div class="resultados">
+      <img src="VACA.jpg" alt="Vaca" class="vaca-imagen" />
+      <div class="datos">
+        <p><strong>Temperatura:</strong> <span id="tempValue">--</span> °C</p>
+        <p><strong>Frecuencia Cardíaca:</strong> <span id="hrValue">--</span> bpm</p>
+        <p><strong>Humedad:</strong> <span id="humValue">--</span> %</p>
+        <p><strong>Presión Atmosférica:</strong> <span id="presionValue">--</span> hPa</p>
+        <p><strong>Nivel de Estrés:</strong> <span id="stressValue">--</span></p>
+      </div>
+    </div>
+
+    <button id="startBtn" onclick="mostrarFormulario()">Iniciar Evaluación</button>
+
+    <div id="formModal" class="modal oculto">
+      <form onsubmit="evaluarDiagnostico(event)">
+        <h3>Responde las siguientes preguntas:</h3>
+
+        <label>¿El animal presenta tos o estornudos frecuentes?
+          <select required>
+            <option value="no">No</option>
+            <option value="sí">Sí</option>
+          </select>
+        </label>
+
+        <label>¿Se observa secreción nasal?
+          <select required>
+            <option value="no">No</option>
+            <option value="sí">Sí</option>
+          </select>
+        </label>
+
+        <label>¿El animal tiene pérdida de apetito?
+          <select required>
+            <option value="no">No</option>
+            <option value="sí">Sí</option>
+          </select>
+        </label>
+
+        <label>¿La ubre está inflamada o caliente?
+          <select required>
+            <option value="no">No</option>
+            <option value="sí">Sí</option>
+          </select>
+        </label>
+
+        <label>¿Se observa jadeo excesivo o fatiga?
+          <select required>
+            <option value="no">No</option>
+            <option value="sí">Sí</option>
+          </select>
+        </label>
+
+        <div class="form-buttons">
+          <button type="submit">Evaluar</button>
+          <button type="button" onclick="cerrarModal()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="resultado-diagnostico">
+      <h3>Diagnóstico:</h3>
+      <pre id="diagnosticoResultado"></pre>
+    </div>
+  </div>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
+
